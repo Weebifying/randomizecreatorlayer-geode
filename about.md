@@ -1,3 +1,4 @@
-# Template Mod
+# Creator Layer Randomizer
 
-Edit about.md to change this
+Shuffles the buttons inside the creator layer everytime you open it
+Also supports gd cologne's gd in 2019 mod but kinda scuffed
