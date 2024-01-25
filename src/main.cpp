@@ -20,11 +20,22 @@ class $modify(AltCreatorLayer, CreatorLayer) {
 
 		// thanks catto	
 		for(auto node : CCArrayExt<CCNode*>(this->getChildren())) {
+<<<<<<< HEAD
 			if (node->getChildrenCount() == 100) menu = node;
 		}
 
 		// making a shuffled index array
 		// ik this isnt optimized but stfu it works sob
+=======
+			log::info("{} {}", node->getID(), node->getChildrenCount());
+			if (node->getChildrenCount() == 100) menu = node;
+		}
+
+	        auto menu_copy = menu;
+
+		log::info("found cologne thing {}", menu->getChildrenCount());
+
+>>>>>>> 6807ba09a541b1aef730689d97188260474caeeb
 		int count = menu->getChildrenCount();
 		int* a = new int[count];
 		for (int i = 0; i < count; i++) {
@@ -32,6 +43,7 @@ class $modify(AltCreatorLayer, CreatorLayer) {
 		}
 		std::shuffle(a, a + count, std::default_random_engine(std::chrono::system_clock::now().time_since_epoch().count()));
 		
+<<<<<<< HEAD
 		// also very NOT optimized but
 		// any way i can get an element out of the CCArray returns a CCObject instead so i cant do shit
 		// so please do tell me if theres a better way
@@ -45,8 +57,27 @@ class $modify(AltCreatorLayer, CreatorLayer) {
 		for(auto node : CCArrayExt<CCNode*>(menu->getChildren())) {
 			node->setPosition(pa[a[x]]);
 			x++;
+=======
+		for(auto node : CCArrayExt<CCNode*>(menu->getChildren())) {
+			//node->setPosition();
+			//menu_copy->getChildren()->objectAtIndex(i)->getPosition()
+		}
+
+		for (int i = 0, i < count, i++) {
+			menu->getChildren()->objectAtIndex(i)->setPosition(
+				menu_copy->getChildren()->objectAtIndex(a[i])->getPositionX(),
+				menu_copy->getChildren()->objectAtIndex(a[i])->getPositionY()
+			);
+			
+>>>>>>> 6807ba09a541b1aef730689d97188260474caeeb
 		}
 
 		return true;
 	}
+<<<<<<< HEAD
 };
+=======
+};
+
+		
+>>>>>>> 6807ba09a541b1aef730689d97188260474caeeb
