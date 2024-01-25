@@ -47,6 +47,9 @@ class $modify(AltCreatorLayer, CreatorLayer) {
 			x++;
 		}
 
+		free(a);
+		free(pa);
+
 		return true;
 	}
 };
