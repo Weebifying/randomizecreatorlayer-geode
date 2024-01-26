@@ -8,7 +8,7 @@
 	"id": "weebify.randomizecreatorlayer-geode",
 	"name": "Creator Layer Randomizer",
 	"developer": "Weebify",
-	"description": "randomizes the creator layer buttons idk",
+	"description": "Randomizes the creator layer buttons",
 	"dependencies": [
 		{
 			"id": "geode.node-ids",
